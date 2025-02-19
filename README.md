@@ -55,7 +55,13 @@ A few files are too large to be stored in this repository. You can find them in 
 
 ## Code (Online Appendix)
 
-- 
+- [AppendixA.R](https://github.com/CasAndreu/lead_follow_states_jop/blob/main/code/AppendixA.R): code to generate Tables A2-A6 in Appendix A.
+
+<img src = "https://github.com/CasAndreu/lead_follow_states_jop/blob/main/tables/tableA2.png">
+<img src = "https://github.com/CasAndreu/lead_follow_states_jop/blob/main/tables/tableA3.png">
+<img src = "https://github.com/CasAndreu/lead_follow_states_jop/blob/main/tables/tableA4.png">
+<img src = "https://github.com/CasAndreu/lead_follow_states_jop/blob/main/tables/tableA5.png">
+<img src = "https://github.com/CasAndreu/lead_follow_states_jop/blob/main/tables/tableA6.png">
 
 ## Figures
 
