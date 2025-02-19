@@ -8,9 +8,22 @@
 # Purpose:  To replicate the analytical tables in Appendix A, showing the 
 #           performance of the BERT text CAP-topic classifiers.
 # Data In:  
-#           1. Datasets with information about the performance of the different
-#              BERT text classifiers
-#              - ./data/ml_performance/final-LEG-model-acc.csv
+#           1. Datasets with information about the performance of the main
+#              BERT text classifiers used in the paper
+#              - media-bert-2022-02-16_06-39-57.csv
+#              - pol-bert-2022-02-15_05-26-26.csv
+#              - legfol-bert-2022-02-15_05-10-20.csv
+#           2. Datasets with info about the performance of the comparison 
+#              RoBERTa models
+#              - media-roberta-2024-04-03_06-08-26.csv
+#              - pol-roberta-2024-04-04_06-01-42.csv
+#              - legfol-roberta-2024-04-04_06-32-39.csv
+#           3. Datasets with info about the performance for the Politician BERT 
+#              model trained on balanced data, for comparison
+#              - pol-bert-2024-07-05_10-00-02.csv
+#           4. Dataset with info about the performance of the Politician SVM
+#              model, for comparison
+#              - pol-svm-2025-02-07_08-24-24.csv
 # Data Out:
 #           Latex code for the following tables:
 #           1. Table A2
