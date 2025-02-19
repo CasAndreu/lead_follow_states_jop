@@ -98,13 +98,26 @@ A few files are too large to be stored in this repository. You can find them in 
 <img src = "https://github.com/CasAndreu/lead_follow_states_jop/blob/main/tables/tableI1.png">
 <img src = "https://github.com/CasAndreu/lead_follow_states_jop/blob/main/tables/tableI2.png">
 
+- [AppendixJ.R](https://github.com/CasAndreu/lead_follow_states_jop/blob/main/code/AppendixH.R): code to generate Table J1 in Appendix J.
+
+<img src = "https://github.com/CasAndreu/lead_follow_states_jop/blob/main/tables/tableJ1.png">
+
+- [AppendixK.R](https://github.com/CasAndreu/lead_follow_states_jop/blob/main/code/AppendixK.R): code to generate Tables K1 and K2 in Appendix K.
+
+<img src = "https://github.com/CasAndreu/lead_follow_states_jop/blob/main/tables/tableK1.png">
+<img src = "https://github.com/CasAndreu/lead_follow_states_jop/blob/main/tables/tableK2.png">
+
 
 ## Figures
 
 - Directory storing the figures, so where the output of the figure-generating code is placed. 
 
-> _Note_: To also avoid fully over-writing the "original" figure files, we placed an `*-ORIGINAL.png` version of each figure in there.
+
+## Figures
+
+- Directory storing a png version of the tables in the main paper and appendices.
+
 
 ## Models
 
-- Directory storing the VAR models and the resulting IRFs. In the figure-generating scripts we offer the option to estimate the VAR models from scratch, or to use a pre-trained/saved version of the models (`*-ORIGINAL.Rdata`) to generate the figures without having to spend computing time estimating the VAR models on your own. So this directory contains these pre-saved versions of the models, as well as it serves as output directory for the figure-generating scripts to place the freshly estimated VARs/IRFs.
+- Directory storing the VAR models and the resulting IRFs. In the scripts where we estimate VAR models, the part where the model is estimated is often commented out, given that it takes several hours to run. A copy of the resulting estimated VAR models from all scripts has been placed in this `models` directory, so that you can run the rest of the code without having to re-estimate the original VAR models.
