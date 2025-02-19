@@ -1,6 +1,6 @@
 # Bottom Up? Top Down? Determinants of Issue-Attention in State Politics
 
-This repository contains the replication code for the paper _"Bottom Up? Top Down? Determinants of Issue-Attention in State Politics"_, authored by Andreu Casas, Oscar Stuhler, Julia Payson, Joshua A. Tucker, Richard Bonneau, and Jonathan Nagler; and conditionally accepted for publication at _The Journal of POlitics_. 
+This repository contains the replication code for the paper _"Bottom Up? Top Down? Determinants of Issue-Attention in State Politics"_, authored by Andreu Casas, Oscar Stuhler, Julia Payson, Joshua A. Tucker, Richard Bonneau, and Jonathan Nagler; and conditionally accepted for publication at _The Journal of Politics_. 
 
 > __Abstract__:
 > Who shapes the issue-attention cycle of state legislators? Although state governments make critical policy decisions, data and methodological constraints have limited researchers' ability to study state-level agenda setting. For this paper, we collect more than 122 million Twitter messages sent by state and national actors in 2018 and 2021. We then employ supervised machine learning and time series techniques to study how the issue-attention of state lawmakers evolves vis-à-vis various local- and national-level actors. Our findings suggest that state legislators operate at the confluence of national and local influences. In line with arguments highlighting the nationalization of state politics, we find that state legislators are consistently responsive to policy debates among members of Congress. However, despite growing nationalization concerns, we also find strong evidence of issue responsiveness by legislators to members of the public in their states and moderate responsiveness to regional media sources.
@@ -15,31 +15,47 @@ A few files are too large to be stored in this repository. You can find them in 
 
   - `group-day-issue-level-dataset-01-2018.csv` & `group-day-issue-level-dataset-01-2021.csv`: day-issue-state-level time series, for 2018 and 2021. All members of Congress pooled together.
   - `group-day-issue-level-dataset-02-2018.csv` & `group-day-issue-level-dataset-02-2021.csv`: day-issue-state-level time series, for 2018 and 2021. Only members of Congress from the same state pooled together.
-  - `group-day-issue-level-dataset-03-2018.csv` & `group-day-issue-level-dataset-03-2021.csv`: day-issue-state-level time series, for 2018 and 2021. Only members of Congress from the same state  pooled together. Distinguishing members of Congress, state legislators, and state partisans, by party ID. 
+  - `group-day-issue-level-dataset-03-2018.csv` & `group-day-issue-level-dataset-03-2021.csv`: day-issue-state-level time series, for 2018 and 2021. Only members of Congress from the same state  pooled together. Distinguishing members of Congress, state legislators, and state partisans, by party ID.
 
-## Code
+- `annotated-tweets-no-text-no-author.csv`: tweet id and topic codes for the 19,949 tweets manually annotated for this project for training the machine learning topic classifiers.
+- `avg-daily-att-per-issue-and-group-2018.csv` & `avg-daily-att-per-issue-and-group-2021.csv`: average daily attention that groups under analysies devoted to each topic in 2018 and 2021.
+- `avg-issue-attention-by-party-grand-means.csv`: average daily attention that Democrats and Republicans devoted to each topic, 2018 and 2021 combined.
+- `bills-with-topic-predictions.csv`: predicted topic probabilities for bills introduced in state legislatures during the period under analysis.
+- `extended_bills_df_ALL-SIMPLIFIED.csv`: id, title, state, date, and description, for the bills introduced in state legislatures during the period under analysis.
+- `state-legislators-mentions-by-partisans-summary.csv`: information about how often other gropus under anlaysis mention state legislators in their tweets.
+- `state-legislators-network-connections-data.csv`: information about how state legislators are connected on Twitter to the other groups under anlaysis.
+
+## Code (Main Paper)
 
 - [00-functions.R](https://github.com/CasAndreu/lead_follow_states_jop/blob/main/code/00-functions.R): a set of functions used in the other figure-generating scripts.
 
 - [01-table02.R](https://github.com/CasAndreu/lead_follow_states_jop/blob/main/code/01-table02.R): code to generate Table 2 of the paper.
 
-<img src = "https://github.com/SMAPPNYU/lead_follow_states/blob/main/figures/figure02-ORIGINAL.png">
+<img src = "https://github.com/CasAndreu/lead_follow_states_jop/blob/main/tables/table02.png">
 
-- [02-figure03.R](https://github.com/SMAPPNYU/lead_follow_states/blob/main/code-figures/02-figure03.R): code to generate Figure 3 in the paper.
+- [02-table04.R](https://github.com/CasAndreu/lead_follow_states_jop/blob/main/code/02-table04.R): code to generate Table 4 of the paper.
 
-<img src = "https://github.com/SMAPPNYU/lead_follow_states/blob/main/figures/figure03-ORIGINAL.png">
+<img src = "https://github.com/CasAndreu/lead_follow_states_jop/blob/main/tables/table04.png">
 
-- [03-figure04.R](https://github.com/SMAPPNYU/lead_follow_states/blob/main/code-figures/03-figure04.R): code to generate Figure 4 in the paper.
+- [03-figure01.R](https://github.com/CasAndreu/lead_follow_states_jop/blob/main/code/03-figure01.R): code to generate Figure 1 of the paper.
 
-<img src = "https://github.com/SMAPPNYU/lead_follow_states/blob/main/figures/figure04-ORIGINAL.png">
+<img src = "https://github.com/CasAndreu/lead_follow_states_jop/blob/main/figures/figure01.png">
 
-- [04-figure05.R](https://github.com/SMAPPNYU/lead_follow_states/blob/main/code-figures/04-figure05.R): code to generate Figure 5 in the paper.
+- [04-figure02.R](https://github.com/CasAndreu/lead_follow_states_jop/blob/main/code/04-figure02.R): code to generate Figure 2 of the paper.
 
-<img src = "https://github.com/SMAPPNYU/lead_follow_states/blob/main/figures/figure05-ORIGINAL.png">
+<img src = "https://github.com/CasAndreu/lead_follow_states_jop/blob/main/figures/figure04.png">
 
-- [05-figure06.R](https://github.com/SMAPPNYU/lead_follow_states/blob/main/code-figures/05-figure06.R): code to generate Figure 6 in the paper.
+- [05-figure03.R](https://github.com/CasAndreu/lead_follow_states_jop/blob/main/code/05-figure03.R): code to generate Figure 3 of the paper.
 
-<img src = "https://github.com/SMAPPNYU/lead_follow_states/blob/main/figures/figure06-ORIGINAL.png">
+<img src = "https://github.com/CasAndreu/lead_follow_states_jop/blob/main/figures/figure03.png">
+
+- [06-figure04.R](https://github.com/CasAndreu/lead_follow_states_jop/blob/main/code/06-figure04.R): code to generate Figure 4 of the paper.
+
+<img src = "https://github.com/CasAndreu/lead_follow_states_jop/blob/main/figures/figure04.png">
+
+## Code (Online Appendix)
+
+- 
 
 ## Figures
 
