@@ -1,5 +1,5 @@
 ################################################################################
-# 05-figure04.R
+# 06-figure04.R
 # Paper:    Bottom Up? Top Down? Determinants of Issue-Attention in State 
 #           Politics.
 # Journal:  Journal of Politics.
