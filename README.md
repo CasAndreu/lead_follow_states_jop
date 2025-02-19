@@ -63,6 +63,16 @@ A few files are too large to be stored in this repository. You can find them in 
 <img src = "https://github.com/CasAndreu/lead_follow_states_jop/blob/main/tables/tableA5.png">
 <img src = "https://github.com/CasAndreu/lead_follow_states_jop/blob/main/tables/tableA6.png">
 
+- [AppendixC.R](https://github.com/CasAndreu/lead_follow_states_jop/blob/main/code/AppendixC.R): code to generate Figure C1 in Appendix C.
+
+<img src = "https://github.com/CasAndreu/lead_follow_states_jop/blob/main/figures/figureC1.png">
+
+- [AppendixD.R](https://github.com/CasAndreu/lead_follow_states_jop/blob/main/code/AppendixD.R): code to generate Figure D1 in Appendix D.
+
+<img src = "https://github.com/CasAndreu/lead_follow_states_jop/blob/main/figures/figureD1.png">
+
+
+
 ## Figures
 
 - Directory storing the figures, so where the output of the figure-generating code is placed. 
