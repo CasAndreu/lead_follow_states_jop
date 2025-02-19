@@ -1,43 +1,23 @@
-# Who Influences The Public Agenda in State Politics? Evidence From 45 Million Twitter Messages
+# Bottom Up? Top Down? Determinants of Issue-Attention in State Politics
 
-This repository contains the replication code for the paper _"Bottom Up? Top Down? Determinants of Issue-Attention in State Politics"_, authored by Andreu Casas, Oscar Stuhler, Julia Payson, Joshua A. Tucker, Richard Bonneau, and Jonathan Nagler.
+This repository contains the replication code for the paper _"Bottom Up? Top Down? Determinants of Issue-Attention in State Politics"_, authored by Andreu Casas, Oscar Stuhler, Julia Payson, Joshua A. Tucker, Richard Bonneau, and Jonathan Nagler; and conditionally accepted for publication at _The Journal of POlitics_. 
 
 > __Abstract__:
 > Who shapes the issue-attention cycle of state legislators? Although state governments make critical policy decisions, data and methodological constraints have limited researchers' ability to study state-level agenda setting. For this paper, we collect more than 122 million Twitter messages sent by state and national actors in 2018 and 2021. We then employ supervised machine learning and time series techniques to study how the issue-attention of state lawmakers evolves vis-à-vis various local- and national-level actors. Our findings suggest that state legislators operate at the confluence of national and local influences. In line with arguments highlighting the nationalization of state politics, we find that state legislators are consistently responsive to policy debates among members of Congress. However, despite growing nationalization concerns, we also find strong evidence of issue responsiveness by legislators to members of the public in their states and moderate responsiveness to regional media sources.
 
-Here a [pdf copy of the paper](https://github.com/SMAPPNYU/lead_follow_states/blob/main/LeadFollowStatesPolitics-7may2021.pdf) to be submitted. [TO BE UPDATED!]
-
 ## Downloading Large Files from Google Drive
 
-A few files are too large to be stored in this repository. You can find them in the following Google Drive: https://drive.google.com/drive/folders/1gLJ-GY44JeyDbsllqrj9NJ65rNSXeDmq?usp=sharing. Before running any code, you should download the files in there and place them in the following directories:
-  
-  - Place the following file under the `data` directory: `tweet-level-data-for-all-groups-but-partisans.csv`. 
-  - Place the following file under the `models` directory: `MODEL_III_RESULT_LISTS-ORIGINAL.Rdata`.
+A few files are too large to be stored in this repository. You can find them in Google Drive. Before running any code, you should download all files from the [models](https://drive.google.com/drive/folders/15V-mTaaCA1bcDYnG4S9oz46KkBj-sSDj) folder, and place them in the `models` directory of this repository. Additionally, you also need to download the following large file from the `data` folder, and place it in the [data](tweet-level-topic-preds-all-tweets-state-legislators-2018-2021.csv) directory in this respository: `tweet-level-topic-preds-all-tweets-state-legislators-2018-2021.csv`.   
 
 ## Data
 
-- Raw datasets that we pre-process to generate the data to which we fit the VAR models:
+- Time series with information about the attention the groups under analysis devoted to each topic.
 
-  - `partisans-day-party-level-dataset.csv`: Party-day-level dataset for "state partisans". This data has already been aggregated at the party-day level in order to anonymize data for these non-public individuals. I contains information about the daily attention paid by these partisans to each of the 22 issues of analysis.
-  - `tweet-level-data-for-all-groups-but-partisans.csv`: Tweet-level dataset with information about the the Pr of the tweet being about each of the 22 issues we study, plus additional information about who sent the tweet. Contains tweets for 5 of the 6 groups we study: state legislators, national legislators, state media, Trump, and national media.
+  - `group-day-issue-level-dataset-01-2018.csv` & `group-day-issue-level-dataset-01-2021.csv`: day-issue-state-level time series, for 2018 and 2021. All members of Congress pooled together.
+  - `group-day-issue-level-dataset-02-2018.csv` & `group-day-issue-level-dataset-02-2021.csv`: day-issue-state-level time series, for 2018 and 2021. Only members of Congress from the same state pooled together.
+  - `group-day-issue-level-dataset-03-2018.csv` & `group-day-issue-level-dataset-03-2021.csv`: day-issue-state-level time series, for 2018 and 2021. Only members of Congress from the same state  pooled together. Distinguishing members of Congress, state legislators, and state partisans, by party ID. 
 
-- Datasets ready to be used for descriptive analysis and fitting the VAR models:
-
-  - `avg-daily-att-per-issue-and-group.csv`: used to generate descriptive Figure 2 in the paper.
-  - `group-day-issue-level-dataset-01.csv`: used to fit the first and third VAR model, reported in Figure 4 and Figure 6.
-  - `group-day-issue-level-dataset-02.csv`: used to generate descriptive Figure 3 in the paper.
-  - `group-day-issue-level-dataset-03.csv`: used to fit the second VAR model, reported in Figure 5.
-
-> _Note_: In the code we show how to generate this second set of pre-processed datasets. To avoid fully over-writing the "original" datasets, we duplicated each of these datasets: see the `*-ORIGINAL.CSV` versions in the data directory.
-
-## Pre-processing code
-
-- [01-generating-group-day-issue-level-dataset-for-model01.R](https://github.com/SMAPPNYU/lead_follow_states/blob/main/code-preprocessing/01-generating-group-day-issue-level-dataset-for-model01.R): generates `group-day-issue-level-dataset-01.csv` from `partisans-day-party-level-dataset.csv` and `tweet-level-data-for-all-groups-but-partisans.csv`.
-- [02-calculating-avg-daily-att-per-issue-and-group.R](https://github.com/SMAPPNYU/lead_follow_states/blob/main/code-preprocessing/02-calculating-avg-daily-att-per-issue-and-group.R): generates `avg-daily-att-per-issue-and-group.csv` from `partisans-day-party-level-dataset.csv` and `tweet-level-data-for-all-groups-but-partisans.csv`.
-- [03-generating-group-day-level-dataset-for-figure03.R](https://github.com/SMAPPNYU/lead_follow_states/blob/main/code-preprocessing/03-generating-group-day-level-dataset-for-figure03.R): generates `group-day-issue-level-dataset-02.csv` from `partisans-day-party-level-dataset.csv` and `tweet-level-data-for-all-groups-but-partisans.csv`.
-- [04-generating-group-day-level-dataset-for-model02.R](https://github.com/SMAPPNYU/lead_follow_states/blob/main/code-preprocessing/04-generating-group-day-level-dataset-for-model02.R): generates `group-day-issue-level-dataset-03.csv` from `partisans-day-party-level-dataset.csv` and `tweet-level-data-for-all-groups-but-partisans.csv`.
-
-## Code to generate the figures
+## Code
 
 - [00-functions.R](https://github.com/SMAPPNYU/lead_follow_states/blob/main/code-figures/00-functions.R): a set of functions used in the other figure-generating scripts.
 
