@@ -19,9 +19,9 @@ A few files are too large to be stored in this repository. You can find them in 
 
 ## Code
 
-- [00-functions.R](https://github.com/SMAPPNYU/lead_follow_states/blob/main/code-figures/00-functions.R): a set of functions used in the other figure-generating scripts.
+- [00-functions.R](https://github.com/CasAndreu/lead_follow_states_jop/blob/main/code/00-functions.R): a set of functions used in the other figure-generating scripts.
 
-- [01-figure02.R](https://github.com/SMAPPNYU/lead_follow_states/blob/main/code-figures/01-figure02.R): code to generate Figure 2 in the paper.
+- [01-table02.R](https://github.com/CasAndreu/lead_follow_states_jop/blob/main/code/01-table02.R): code to generate Table 2 of the paper.
 
 <img src = "https://github.com/SMAPPNYU/lead_follow_states/blob/main/figures/figure02-ORIGINAL.png">
 
