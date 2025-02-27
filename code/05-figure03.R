@@ -18,8 +18,8 @@
 #           topic we study. However, unlike in the files used for our main models
 #           the time series for MoCs were differentiated by the state they
 #           are associated with.
-#           /data/group-day-issue-level-dataset-04-2018.csv
-#           /data/group-day-issue-level-dataset-04-2021.csv
+#           /data/group-day-issue-level-dataset-03-2018.csv
+#           /data/group-day-issue-level-dataset-03-2021.csv
 # Data Out:
 #           1. Two estimated VAR models, one for 2018 and one for 2021.
 #              /models/MODEL_DIFFERENTIATED_2018.Rdata
@@ -61,7 +61,7 @@ library(stringr)
 #  # DATA
 #  #-----------------------------------------------------------------------------
 #  # Model data
-#  load_file <- paste0("./data/group-day-issue-level-dataset-04-", year,".csv")
+#  load_file <- paste0("./data/group-day-issue-level-dataset-03-", year,".csv")
 #  maindb <- read.csv(load_file)
 #  
 #  # Sort:
