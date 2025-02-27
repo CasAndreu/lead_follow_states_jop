@@ -10,6 +10,8 @@ This repository contains the replication code for the paper _"Bottom Up? Top Dow
 A few files are too large to be stored in this repository. You can find them in Google Drive. Before running any code, you should download all files from the [models](https://drive.google.com/drive/folders/15V-mTaaCA1bcDYnG4S9oz46KkBj-sSDj) folder, and place them in the `models` directory of this repository. Additionally, you also need to download the following large file from the `data` folder, and place it in the [data](tweet-level-topic-preds-all-tweets-state-legislators-2018-2021.csv) directory in this respository: `tweet-level-topic-preds-all-tweets-state-legislators-2018-2021.csv`.   
 
 ## Data
+> __Note__:
+> A [codebook](https://github.com/CasAndreu/lead_follow_states_jop/blob/main/codebook.pdf) describing the variables included in the datasets listed below is provided.
 
 - Time series with information about the attention the groups under analysis devoted to each topic.
 
@@ -26,6 +28,10 @@ A few files are too large to be stored in this repository. You can find them in 
 - `state-legislators-network-connections-data.csv`: information about how state legislators are connected on Twitter to the other groups under anlaysis.
 
 ## Code (Main Paper)
+
+> __Notes__:
+> * Replication code and data are not provided for non-analytical Tables (Table 1, Table A1, Table B1, Table D1).
+> * Replication data is not provided for analytical figures the use the text of tweets as input, in compliance of Twitter's Terms of Services (Table 3, and Tables A7-A11). However, code is provided showing how these tables were generated: [AppendixA_02_table03.R](https://github.com/CasAndreu/lead_follow_states_jop/blob/main/code/AppendixA_02_table03.R). 
 
 - [00-functions.R](https://github.com/CasAndreu/lead_follow_states_jop/blob/main/code/00-functions.R): a set of functions used in the other figure-generating scripts.
 
