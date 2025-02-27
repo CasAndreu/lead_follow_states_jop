@@ -33,6 +33,10 @@ A few files are too large to be stored in this repository. You can find them in 
 
 <img src = "https://github.com/CasAndreu/lead_follow_states_jop/blob/main/tables/table02.png">
 
+- [AppendixA_02_table03.R](https://github.com/CasAndreu/lead_follow_states_jop/blob/main/code/AppendixA_02_table03.R): code to generate Table 3 of the paper, and Tables A7-A11 in Appendix A. Input data is not provided for this code, in compliance of Twitter's Terms of Service.
+
+<img src = "https://github.com/CasAndreu/lead_follow_states_jop/blob/main/tables/table03.png">
+
 - [02-table04.R](https://github.com/CasAndreu/lead_follow_states_jop/blob/main/code/02-table04.R): code to generate Table 4 of the paper.
 
 <img src = "https://github.com/CasAndreu/lead_follow_states_jop/blob/main/tables/table04.png">
@@ -62,6 +66,10 @@ A few files are too large to be stored in this repository. You can find them in 
 <img src = "https://github.com/CasAndreu/lead_follow_states_jop/blob/main/tables/tableA4.png">
 <img src = "https://github.com/CasAndreu/lead_follow_states_jop/blob/main/tables/tableA5.png">
 <img src = "https://github.com/CasAndreu/lead_follow_states_jop/blob/main/tables/tableA6.png">
+
+- [AppendixA_02_table03.R](https://github.com/CasAndreu/lead_follow_states_jop/blob/main/code/AppendixA_02_table03.R): code to generate Tables A7-A11 in Appendix A. Input data is not provided for this code, in compliance of Twitter's Terms of Service.
+
+<img src = "https://github.com/CasAndreu/lead_follow_states_jop/blob/main/tables/table03.png">
 
 - [AppendixC.R](https://github.com/CasAndreu/lead_follow_states_jop/blob/main/code/AppendixC.R): code to generate Figure C1 in Appendix C.
 
